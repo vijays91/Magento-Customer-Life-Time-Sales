@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <myconf_vijaystore translate="label" module="customerlifetimesales">
+            <label>VijayStore</label>
+            <sort_order>300</sort_order>
+        </myconf_vijaystore>
+    </tabs>	
+	
+    <sections>
+        <customerlifetimesales_tab translate="label" module="customerlifetimesales">
+            <label>Customer Life Time Sales</label>
+            <tab>myconf_vijaystore</tab>
+            <sort_order>1</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+			<!-- General Setting -->
+                <customerlifetimesales_setting translate="label comment">
+                    <label>Customer Life Time Sales Setting</label>
+                    <sort_order>503</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                      <customerlifetimesales_active translate="label comment">
+                            <label>Customer Life Time Sales</label>
+							<frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+							<comment>Customer Life Time Sales Enable/Disable</comment>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </customerlifetimesales_active>
+                     </fields>
+                </customerlifetimesales_setting>                
+            </groups>
+        </customerlifetimesales_tab>
+    </sections>
+</config>

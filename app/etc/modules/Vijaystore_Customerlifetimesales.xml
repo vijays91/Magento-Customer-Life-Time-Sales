@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Vijaystore_Customerlifetimesales>
+            <active>true</active>
+            <codePool>local</codePool>
+			<version>1.0.0</version>
+            <depends>
+                <Mage_Customer />
+                <Mage_Adminhtml />
+            </depends>
+        </Vijaystore_Customerlifetimesales>
+    </modules>
+</config>
+

@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Vijaystore_Customerlifetimesales>
+            <version>1.0.0</version>
+        </Vijaystore_Customerlifetimesales>
+    </modules>
+    <global>
+        <blocks>
+            <adminhtml>
+                <rewrite>
+                    <customer_grid>Vijaystore_Customerlifetimesales_Block_Adminhtml_Customer_Grid</customer_grid>
+					<!-- rewrite the customer grid -->
+                </rewrite>
+            </adminhtml>
+			
+			<customerlifetimesales>
+                <class>Vijaystore_Customerlifetimesales_Block</class>
+            </customerlifetimesales>
+        </blocks>
+		
+		<helpers>
+			<customerlifetimesales>
+				<class>Vijaystore_Customerlifetimesales_Helper</class>
+			</customerlifetimesales>
+		</helpers>
+    </global>
+	
+	<adminhtml>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+				    <children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<customerlifetimesales_tab>
+											<title>Customer lifetime Sales Setting</title>
+										</customerlifetimesales_tab>				
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>
+
+	<default>
+		<customerlifetimesales_tab>
+			<customerlifetimesales_setting>
+				<customerlifetimesales_active>1</customerlifetimesales_active>
+			</customerlifetimesales_setting>	
+		</customerlifetimesales_tab>
+	</default>
+</config>
